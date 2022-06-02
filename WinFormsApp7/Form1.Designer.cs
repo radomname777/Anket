@@ -54,7 +54,7 @@
             // 
             // Anket
             // 
-            this.Anket.BackColor = System.Drawing.Color.White;
+            this.Anket.BackColor = System.Drawing.Color.Transparent;
             this.Anket.Controls.Add(this.dateTimePicker1);
             this.Anket.Controls.Add(this.phone_lbl);
             this.Anket.Controls.Add(this.email_lbl);
@@ -73,7 +73,7 @@
             this.Anket.Controls.Add(this.label1);
             this.Anket.Location = new System.Drawing.Point(12, 12);
             this.Anket.Name = "Anket";
-            this.Anket.Size = new System.Drawing.Size(410, 433);
+            this.Anket.Size = new System.Drawing.Size(430, 433);
             this.Anket.TabIndex = 0;
             this.Anket.TabStop = false;
             this.Anket.Text = "groupBox1";
@@ -228,8 +228,9 @@
             // 
             // listBox1
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.BackColor = System.Drawing.Color.DarkCyan;
+            this.listBox1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listBox1.ForeColor = System.Drawing.Color.Linen;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(471, 12);
@@ -248,7 +249,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(472, 384);
+            this.button3.Location = new System.Drawing.Point(471, 389);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 56);
@@ -268,7 +269,7 @@
             this.btn_load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_load.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_load.ForeColor = System.Drawing.Color.White;
-            this.btn_load.Location = new System.Drawing.Point(582, 384);
+            this.btn_load.Location = new System.Drawing.Point(581, 389);
             this.btn_load.Margin = new System.Windows.Forms.Padding(0);
             this.btn_load.Name = "btn_load";
             this.btn_load.Size = new System.Drawing.Size(160, 56);
@@ -280,7 +281,7 @@
             // 
             // filename_txt
             // 
-            this.filename_txt.Location = new System.Drawing.Point(471, 360);
+            this.filename_txt.Location = new System.Drawing.Point(471, 363);
             this.filename_txt.Name = "filename_txt";
             this.filename_txt.PlaceholderText = "File name";
             this.filename_txt.Size = new System.Drawing.Size(270, 23);
@@ -290,6 +291,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(751, 450);
             this.Controls.Add(this.filename_txt);
             this.Controls.Add(this.btn_load);

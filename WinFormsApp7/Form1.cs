@@ -5,7 +5,9 @@ namespace WinFormsApp7
 {
     public partial class Form1 : Form
     {
-        public Form1() {InitializeComponent();}
+        public Form1() {InitializeComponent();
+
+        }
 
         //string[][] strarr = new string[][]{};
         List<string[]> list1 = new List<string[]>();
@@ -32,27 +34,23 @@ namespace WinFormsApp7
             {
                 int i = 0;
                 string[] ar = new string[5];
-                foreach (Control gb in this.Controls)
-                {
-                    if (gb is GroupBox)
-                    {
-                        foreach (Control tb in gb.Controls)
-                        {
 
-                            if (tb is TextBox)
-                            {
-                                ar[i++] = tb.Text;
-                                if (i == 4)
-                                {
-                                    ar[4] = dateTimePicker1.Text.ToString();
-                                    list1.Add(ar);
-                                    i = 0;
-                                }
-                            }
+                foreach (Control tb in Anket.Controls)
+                {
+
+                    if (tb is TextBox)
+                    {
+                        ar[i++] = tb.Text;
+                        if (i == 4)
+                        {
+                            ar[4] = dateTimePicker1.Text.ToString();
+                            list1.Add(ar);
+                            i = 0;
                         }
                     }
+                
 
-                }
+                }  
                 
                 listBox1.Items.Clear();
                 foreach (var item in list1) { listBox1.Items.Add(item[3]); }
@@ -137,29 +135,20 @@ namespace WinFormsApp7
                 }
             }
         }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
         private void Itemsload(string[] str)
         {
-            int i = 0;
-
-            foreach (Control gb in this.Controls)
-            {
-                if (gb is GroupBox)
-                {
-                    foreach (Control tb in gb.Controls) {
-                        if (tb is TextBox)
-                        {
-                            tb.Text = str[i++];
-                            if (i==4) dateTimePicker1.Text = str[i];   
-                        }
-                    }
-                }
-
-            }
+           int i = 0;
+           foreach (Control tb in Anket.Controls) {
+               if (tb is TextBox)
+               {
+                   tb.Text = str[i++];
+                   if (i==4) dateTimePicker1.Text = str[i];   
+               }
+           }
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -168,10 +157,14 @@ namespace WinFormsApp7
             {
                 foreach (var item2 in list1)
                 {
-                  //  MessageBox.Show(item.ToString(), item2[3].ToString());
                     if (item.ToString() == item2[3])Itemsload(item2.ToArray());
                 }
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
